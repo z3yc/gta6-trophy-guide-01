@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI 55 Trophies, Offline Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide &amp; tracker</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every one of the 55 official trophies — name, description and grade as PlayStation publishes them — with a guide in our own words, a platinum roadmap, the one missable trophy flagged, and a checklist that saves in your browser. No network needed: this page runs entirely from its own files.</p>
+  </div>
+  <div class="progress-card" aria-label="Progress">
+    <div class="progress-big"><span id="earned-count">0</span><span class="of"> / 55</span></div>
+    <div class="progress-label">trophies earned</div>
+    <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+    <div id="progress-by-grade" class="progress-grades"></div>
+  </div>
+</header>
+
+<section class="missable-banner" id="missable-banner">
+  <strong>⚠ One trophy can be missed.</strong>
+  <span id="missable-text"></span>
+</section>
+
+<section class="roadmap" aria-label="Platinum roadmap">
+  <h2>Roadmap to the Platinum</h2>
+  <p class="roadmap-intro">PowerPyx rates the set 4/10 and about 200 hours; Push Square puts the total at 300 hours or more. One playthrough is enough, every trophy is offline, and there is no mission replay — so story trophies are earned as you go.</p>
+  <ol id="roadmap-steps" class="roadmap-steps"></ol>
+</section>
+
+<section class="controls" aria-label="Tracker controls">
+  <div class="controls-row">
+    <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or guide text…" autocomplete="off"></label>
+    <label class="grade-label">Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check-label"><input id="spoiler" type="checkbox"> Spoiler-free: hide un-earned story trophies</label>
+    <label class="check-label"><input id="earned-only" type="checkbox"> Earned only</label>
+  </div>
+  <div class="controls-row">
+    <div class="kind-filters" id="kind-filters" role="group" aria-label="Filter by kind"></div>
+    <div class="file-buttons">
+      <button id="export" type="button">Export progress</button>
+      <label class="import-label">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+      <button id="reset" type="button">Reset</button>
+    </div>
+  </div>
+  <p id="filter-note" class="filter-note"></p>
+</section>
+
+<main>
+  <ul id="trophy-list" class="trophy-list"></ul>
+  <p id="empty-state" class="empty-state" hidden>No trophies match these filters.</p>
+</main>
+
+<footer>
+  <h2>Sources</h2>
+  <p>Official trophy names, descriptions and grades are shown as PlayStation publishes them (via the Exophase and PSNProfiles lists, which agree on all 55). Every guide on this page is written in our own words for this guide and cites its sources by name; where no reliable method had been published yet — the game released 19 November 2026 — the guide says so instead of inventing steps. A named source is a citation, never copied text.</p>
+  <ul id="source-list" class="source-list"></ul>
+  <p class="fineprint">Works offline: every file this page loads lives in its own folder, and it makes no network request. Progress is stored only in your browser (localStorage) unless you export it.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
